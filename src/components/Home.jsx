@@ -1,8 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import projects from "../projects";
 import arrow from "../images/fleche.png";
+import { Link } from "react-router-dom";
 
-const Home = ({ scroll, scrollDown, setScrollDown, getHeightHome }) => {
+const Home = ({
+  scroll,
+  scrollDown,
+  setScrollDown,
+  getHeightHome,
+  sizeWindow,
+}) => {
   const [scrollPortefolio, setScrollPortefolio] = useState(0);
   const homeRef = useRef();
 
@@ -33,11 +40,13 @@ const Home = ({ scroll, scrollDown, setScrollDown, getHeightHome }) => {
     const timeout = setTimeout(() => {
       getHeightHome(homeRef);
       setScrollDown(0);
-    }, 200);
+      setScrollPortefolio(0);
+    }, 1000);
     return () => {
       clearInterval(timeout);
     };
-  }, [homeRef]);
+  }, [homeRef, sizeWindow]);
+
   return (
     <div
       className="home"
@@ -117,8 +126,10 @@ const Home = ({ scroll, scrollDown, setScrollDown, getHeightHome }) => {
         </div>
         <div className="portefolio__buttonProject">
           <button>
-            <p>Plus de projets</p>
-            <img src={arrow} alt="arrow" />
+            <Link to="/portefolio">
+              <p>Plus de projets</p>
+              <img src={arrow} alt="arrow" />
+            </Link>
           </button>
         </div>
       </div>

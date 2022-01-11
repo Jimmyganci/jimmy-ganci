@@ -4,7 +4,13 @@ import projects from "../projects";
 import ProjectDetails from "./ProjectDetails";
 import { useNavigate } from "react-router-dom";
 
-const Portefolio = ({ scroll, scrollDown, setScrollDown, getHeightHome }) => {
+const Portefolio = ({
+  scroll,
+  scrollDown,
+  setScrollDown,
+  getHeightHome,
+  sizeWindow,
+}) => {
   const [projectSelect, setProjectsDelect] = useState(1);
   const [selectedProject, setSelectedProject] = useState(false);
   const [growHeight, setGrowHeight] = useState(false);
@@ -18,7 +24,7 @@ const Portefolio = ({ scroll, scrollDown, setScrollDown, getHeightHome }) => {
   useEffect(() => {
     getHeightHome(portefolioRef);
     setScrollDown(0);
-  }, []);
+  }, [portefolioRef, sizeWindow]);
   return (
     <div
       className="portefolio"

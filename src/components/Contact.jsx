@@ -6,7 +6,13 @@ import github from "../images/github.png";
 import linkedin from "../images/linkedin.png";
 import cv from "../images/cv.png";
 
-const Contact = ({ scroll, setScrollDown, scrollDown, getHeightHome }) => {
+const Contact = ({
+  scroll,
+  setScrollDown,
+  scrollDown,
+  getHeightHome,
+  sizeWindow,
+}) => {
   const contactRef = useRef();
   const socialRef = useRef(null);
 
@@ -26,7 +32,7 @@ const Contact = ({ scroll, setScrollDown, scrollDown, getHeightHome }) => {
   useEffect(() => {
     getHeightHome(contactRef);
     setScrollDown(0);
-  }, []);
+  }, [socialRef, sizeWindow]);
 
   return (
     <div
