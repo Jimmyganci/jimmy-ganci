@@ -1,0 +1,13 @@
+.circleSkill {
+  width: 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 1s ease-in-out;
+  opacity: 0;
+  transform: translateY(5vw);
+  @media screen and(max-width: 650px) {
+    width: 30vw;
+    margin: 5vw;
+  }
+}

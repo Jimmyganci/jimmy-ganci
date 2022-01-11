@@ -1,0 +1,22 @@
+{
+  "name": "jimmyganci",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "react": "^17.0.2",
+    "react-circular-progressbar": "^2.0.4",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1",
+    "react-transition-group": "^4.4.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.7",
+    "eslint-plugin-react": "^7.28.0",
+    "vite": "^2.7.2"
+  }
+}

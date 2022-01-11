@@ -1,0 +1,83 @@
+.portefolio {
+  transition: 0.8s cubic-bezier(0.23, 0.59, 0.48, 0.99);
+  .portefolioSlideShow {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    &__title {
+      width: 100%;
+      mix-blend-mode: color-dodge;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 80%;
+        left: 0%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 10%;
+        background: #9e9e6f;
+        mix-blend-mode: color-dodge;
+      }
+      h1 {
+        font-size: 10vw;
+        letter-spacing: 5vw;
+        pointer-events: none;
+        height: 15vw;
+        overflow: hidden;
+        transition: 2s !important;
+        margin-left: 5vw;
+        @media screen and(max-width:500px) {
+          font-size: 14vw;
+        }
+        span {
+          color: rgb(158, 158, 111);
+        }
+      }
+    }
+
+    &__projects {
+      width: 50vw;
+      height: 30vh;
+      z-index: 2;
+      position: absolute;
+      @media screen and(max-width:800px) {
+        width: 70vw;
+      }
+      &--project {
+        height: 100%;
+        display: flex;
+        img {
+          filter: saturate(0.5);
+          object-fit: cover;
+          cursor: pointer;
+          transition: 0.5s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    &__containerNumber {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      z-index: 3;
+      margin-top: 10vw;
+      &--list {
+        margin: 0 2vw;
+        font-family: "fontNumber";
+        font-size: 8vw;
+        @media screen and(max-width:550px) {
+          font-size: 15vw !important;
+        }
+        cursor: pointer;
+        transition: 0.3s ease-in;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.app {
+  height: 100vh;
+  overflow: hidden;
+  @media screen and(max-width:800Px) {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: unset;
+  }
+  .page {
+    position: relative;
+  }
+
+  .page-enter {
+    opacity: 0;
+    transition: 0.5s !important;
+  }
+
+  .page-enter-active {
+    opacity: 1;
+    transition-delay: 0.5s !important;
+  }
+
+  .page-exit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 1;
+    height: 100vh;
+    overflow: hidden !important;
+    transition: 0.5s !important;
+  }
+
+  .page-exit-active {
+    opacity: 0;
+  }
+}
