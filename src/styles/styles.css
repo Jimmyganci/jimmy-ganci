@@ -791,7 +791,7 @@ img {
 }
 
 .contact__header--flex--title h1 {
-  font-size: 20vw;
+  font-size: 16vw;
   line-height: 0.9;
   text-align: end;
   -webkit-transition: 0.8s cubic-bezier(0.23, 0.59, 0.48, 0.99);
@@ -1070,13 +1070,10 @@ img {
   padding: 6vw 0;
 }
 
-.grid--textContainer p {
-  margin: 5vw 0;
-}
-
 @media screen and (max-width: 650px) {
   .grid--textContainer p {
     font-size: 5vw;
+    margin: 5vw 0;
   }
 }
 
@@ -1123,7 +1120,7 @@ img {
   height: 4vw;
 }
 
-@media screen {
+@media screen and (max-width: 750px) {
   .grid--text img {
     width: 10vw;
     height: 10vw;
