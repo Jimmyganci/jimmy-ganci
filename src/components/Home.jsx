@@ -77,16 +77,16 @@ const Home = ({
           <div className="about__description--text">
             <p>
               Militaire en reconversion professionnelle, c'est vers le
-              développement web que mon interêt c'est porté.
+              développement web que mon interêt s'est porté.
             </p>
             <p>
               Autodidacte, j'ai pu me former grâce à la réalisation de deux
               projets personnels.
             </p>
             <p>
-              Curieux et passioné, j'ai entrepris une formation à la Wild Code
-              School, période durant laquelle j'ai pu continuer à réaliser des
-              projets, seul ou en groupe.
+              Curieux et passionné, j'ai alors suivi une formation à la Wild
+              Code School, période durant laquelle j'ai pu continuer à réaliser
+              des projets, seul ou en groupe.
             </p>
           </div>
         </div>
