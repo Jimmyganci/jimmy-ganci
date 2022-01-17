@@ -70,7 +70,7 @@ const projects = [
     mastered: `Maitrise du HTML, CSS et du javascript Vanilla`,
     difficulty: `Prendre en main le SCSS et le BEM`,
     text: `Premier projet à la Wild, site vitrine d'un restaurant. 
-	Première utilisation de SASS et BEM, utilisation plus intensve de javascript vanilla`,
+	Première utilisation de SASS et BEM, utilisation plus intensive de javascript vanilla`,
     image: project3,
     image2: project3a,
     image3: project3b,
