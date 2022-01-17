@@ -76,13 +76,17 @@ const Home = ({
           <div className="about__description--image" style={styleAbout}></div>
           <div className="about__description--text">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
-              possimus quibusdam laboriosam dicta adipisci necessitatibus
-              reprehenderit deleniti quae. Pariatur inventore ipsum dolorem
-              blanditiis, veritatis molestiae magnam neque commodi rerum,
-              excepturi hic. Perspiciatis nostrum nobis perferendis hic
-              voluptatem quibusdam, sequi velit distinctio, molestias
-              consequuntur ullam? Qui ipsum blanditiis fugit quasi impedit.
+              Militaire en reconversion professionnelle, c'est vers le
+              développement web que mon interêt c'est porté.
+            </p>
+            <p>
+              Autodidacte, j'ai pu me former grâce à la réalisation de deux
+              projets personnels.
+            </p>
+            <p>
+              Curieux et passioné, j'ai entrepris une formation à la Wild Code
+              School, période durant laquelle j'ai pu continuer à réaliser des
+              projets, seul ou en groupe.
             </p>
           </div>
         </div>
