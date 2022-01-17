@@ -6,6 +6,29 @@
     overflow-x: hidden;
     overflow-y: unset;
   }
+  &__buttonHeader {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(158, 158, 111);
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    width: 10vw;
+    border-radius: 0 0 50% 50%;
+    font-size: 1.5vw;
+    @media screen and(max-width:750px) {
+      width: 20vw;
+      font-size: 3vw;
+    }
+    @media screen and(max-width:450px) {
+      width: 25vw;
+      font-size: 4vw;
+    }
+  }
   .page {
     position: relative;
   }

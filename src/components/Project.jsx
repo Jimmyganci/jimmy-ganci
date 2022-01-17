@@ -1,5 +1,4 @@
 import React from "react";
-import projects from "../projects";
 
 const Project = ({ el }) => {
   return (

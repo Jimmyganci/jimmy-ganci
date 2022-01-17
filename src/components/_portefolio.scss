@@ -2,80 +2,181 @@
   transition: 0.8s cubic-bezier(0.23, 0.59, 0.48, 0.99);
   .portefolioSlideShow {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
+    position: relative;
     &__title {
-      width: 100%;
-      mix-blend-mode: color-dodge;
-      position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 80%;
-        left: 0%;
-        transform: translateY(-50%);
-        width: 100%;
-        height: 10%;
-        background: #9e9e6f;
-        mix-blend-mode: color-dodge;
-      }
-      h1 {
-        font-size: 10vw;
-        letter-spacing: 5vw;
-        pointer-events: none;
-        height: 15vw;
-        overflow: hidden;
-        transition: 2s !important;
-        margin-left: 5vw;
-        @media screen and(max-width:500px) {
-          font-size: 14vw;
-        }
-        span {
-          color: rgb(158, 158, 111);
-        }
-      }
-    }
-
-    &__projects {
-      width: 40vw;
-      height: 40vh;
-      z-index: 2;
       position: absolute;
-      @media screen and(max-width:800px) {
-        width: 70vw;
+      top: 18%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      font-size: 12vw;
+      display: flex;
+      width: 70%;
+      justify-content: center;
+      z-index: 3;
+      @media screen and(max-width:550px) {
+        font-size: 22vw;
+        top: 13%;
       }
-      &--project {
-        height: 100%;
+      div {
+        position: absolute;
         display: flex;
-        img {
-          filter: saturate(0.5);
-          object-fit: cover;
-          cursor: pointer;
-          transition: 0.5s ease-in-out;
-          &:hover {
-            transform: scale(1.1);
+        flex-wrap: wrap;
+        align-items: center;
+        visibility: hidden;
+        #marginWord {
+          margin-left: 5vw;
+          display: flex;
+          visibility: hidden;
+          span {
+            position: relative;
+            overflow: hidden;
+            p {
+              font-family: "fontTitleProject";
+              transform: translateX(-100%);
+              transition: 1s cubic-bezier(0.23, 0.59, 0.48, 0.99);
+              text-transform: uppercase;
+            }
           }
         }
       }
     }
-    &__containerNumber {
+
+    &--screenDynamic {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: 1s cubic-bezier(0.23, 0.59, 0.48, 0.99);
+    }
+
+    &__projects {
       display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      z-index: 3;
-      margin-top: 10vw;
-      &--list {
-        margin: 0 2vw;
-        font-family: "fontNumber";
-        font-size: 8vw;
+      margin-left: 25vw;
+      margin-top: 5vw;
+      transition: 1s cubic-bezier(0.23, 0.59, 0.48, 0.99);
+      @media screen and(max-width:550px) {
+        margin-left: 0;
+      }
+      &--project {
+        width: 35vw;
+        height: 25vw;
+        display: flex;
+        margin-right: 10vw;
+        transition: 0.5s ease-in-out;
+        position: relative;
+        overflow: hidden;
         @media screen and(max-width:550px) {
-          font-size: 15vw !important;
+          height: 100vw;
+          margin-right: 0;
         }
-        cursor: pointer;
-        transition: 0.3s ease-in;
-        &:hover {
-          transform: scale(1.1);
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          transition: 0.3s ease-in-out;
+        }
+        img {
+          object-fit: cover;
+          cursor: pointer;
+          transition: 1s cubic-bezier(0.23, 0.59, 0.48, 0.99);
+          position: relative;
+        }
+      }
+    }
+    &__link {
+      z-index: 1;
+      text-align: center;
+      margin: 1vw 0;
+      transition: 1s cubic-bezier(0.23, 0.59, 0.48, 0.99);
+      text-decoration: underline;
+      font-size: 2vw;
+      @media screen and(max-width:550px) {
+        font-size: 10vw;
+        width: 50%;
+        margin: -5vw auto 5vw;
+      }
+      a {
+        @media screen and(max-width:550px) {
+          padding: 2vw;
+        }
+      }
+    }
+    &__infos {
+      z-index: 3;
+      display: flex;
+      justify-content: space-around;
+      @media screen and(max-width:550px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+      }
+      &--id {
+        position: relative;
+        overflow: hidden;
+        width: 10vw;
+        @media screen and(max-width:550px) {
+          grid-area: 1/1;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin-left: 10vw;
+        }
+        p {
+          position: absolute;
+          transform: translateY(18vw);
+          transition: 1s cubic-bezier(0.23, 0.59, 0.48, 0.99);
+          font-size: 5vw;
+          font-family: "fontNumber";
+          @media screen and(max-width:550px) {
+            font-size: 15vw;
+          }
+        }
+      }
+      &__containerNumber {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 5vw 0 0 0;
+        height: 20px;
+        @media screen and(max-width:550px) {
+          grid-area: 2/1/2/3;
+        }
+        &--list {
+          width: 10px;
+          height: 10px;
+          background: black;
+          margin: 1vw 3vw;
+          border-radius: 50%;
+          transition-delay: 1s;
+          transition: 0.3s ease-in;
+        }
+      }
+      &--date {
+        position: relative;
+        overflow: hidden;
+        width: 10vw;
+        @media screen and(max-width:550px) {
+          width: 100%;
+          grid-area: 1/2;
+        }
+        p {
+          position: absolute;
+          transform: translateY(18vw);
+          transition: 1s cubic-bezier(0.23, 0.59, 0.48, 0.99);
+          font-size: 2vw;
+          left: 50%;
+          @media screen and(max-width:550px) {
+            left: 10%;
+            font-size: 10vw;
+          }
         }
       }
     }

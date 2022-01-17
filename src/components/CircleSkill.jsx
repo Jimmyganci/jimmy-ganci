@@ -17,9 +17,14 @@ const CircleSkill = ({ skill, index }) => {
   );
 
   useEffect(() => {
-    let countInterval = setInterval(() => {
-      if (count < skill.skill && isVisible) setCount(count + 1);
+    const countInterval = setInterval(() => {
+      if (isVisible) {
+        if (count < skill.skill) setCount(count + 1);
+      } else {
+        setCount(0);
+      }
     }, 30);
+
     return () => {
       clearInterval(countInterval);
     };

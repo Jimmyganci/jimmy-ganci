@@ -14,7 +14,6 @@ const TextGrid = ({ project, position }) => {
     },
     gridRef
   );
-  console.log(isVisible);
   return (
     <div className={`grid--textContainer`}>
       <div className="grid--text">

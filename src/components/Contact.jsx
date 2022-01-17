@@ -5,6 +5,7 @@ import UseElementOnScreen from "../hooks/UseElementOnScreen";
 import github from "../images/github.png";
 import linkedin from "../images/linkedin.png";
 import cv from "../images/cv.png";
+import cvPdf from "../images/cv.pdf";
 
 const Contact = ({
   scroll,
@@ -12,9 +13,11 @@ const Contact = ({
   scrollDown,
   getHeightHome,
   sizeWindow,
+  setMenu,
 }) => {
   const contactRef = useRef();
   const socialRef = useRef(null);
+  const [send, setSend] = useState(false);
 
   const styleScroll = {
     transform: `translateY(-${scrollDown}px)`,
@@ -30,6 +33,7 @@ const Contact = ({
   );
 
   useEffect(() => {
+    setMenu(false);
     getHeightHome(contactRef);
     setScrollDown(0);
   }, [socialRef, sizeWindow]);
@@ -59,9 +63,8 @@ const Contact = ({
               <img src={github} alt="github" />
             </a>
             <a
-              href="https://github.com/Jimmyganci"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={cvPdf}
+              download="cv.pdf"
               className={isVisible ? "noTranslate" : ""}
               style={{
                 transition: "0.7s cubic-bezier(.68,.32,.56,1.42)",
@@ -71,7 +74,7 @@ const Contact = ({
               <img src={cv} alt="github" />
             </a>
             <a
-              href="https://github.com/Jimmyganci"
+              href="https://www.linkedin.com/in/jimmy-ganci-b4a9a5209/"
               target="_blank"
               rel="noopener noreferrer"
               className={isVisible ? "noTranslate" : ""}
@@ -83,7 +86,7 @@ const Contact = ({
               <img src={linkedin} alt="github" />
             </a>
           </div>
-          <Phone scrollDown={scrollDown} />
+          <Phone send={send} scrollDown={scrollDown} />
           <div className="contact__header--flex--title">
             <p>Echangeons ensemble</p>
             <h1 style={{ transform: `translateY(${scrollDown / 3}px)` }}>
@@ -100,7 +103,7 @@ const Contact = ({
         </div>
       </div>
       <div className="contact__form">
-        <Form socialRef={socialRef} />
+        <Form setSend={setSend} socialRef={socialRef} />
       </div>
     </div>
   );

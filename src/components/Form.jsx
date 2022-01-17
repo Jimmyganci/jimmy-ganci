@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Form = ({ socialRef }) => {
+const Form = ({ socialRef, setSend }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -9,13 +9,15 @@ const Form = ({ socialRef }) => {
 
   const handleSubmitMail = (e) => {
     e.preventDefault();
-    axios.post("https://portefoliojimmyganci.herokuapp.com/", {
-      firstname: firstName,
-      lastname: lastName,
-      email: email,
-      subject: " ",
-      text: text,
-    });
+    axios
+      .post("https://portefoliojimmyganci.herokuapp.com/", {
+        firstname: firstName,
+        lastname: lastName,
+        email: email,
+        subject: " ",
+        text: text,
+      })
+      .then((res) => res.status === 200 && setSend(true));
     setFirstName("");
     setLastName("");
     setEmail("");

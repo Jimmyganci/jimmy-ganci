@@ -22,7 +22,7 @@ import project5c from "./images/project5c.png";
 const projects = [
   {
     id: 1,
-    title: "Studio AG Interior",
+    title: "Studio ag Interior",
     date: "Mars 2021",
     status: "Terminé",
     mastered: `Maitrise de l'informatique...`,
@@ -64,7 +64,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "The WILD Restaurant",
+    title: "The Wild Restaurant",
     date: "Sept 2021",
     status: "Terminé",
     mastered: `Maitrise du HTML, CSS et du javascript Vanilla`,

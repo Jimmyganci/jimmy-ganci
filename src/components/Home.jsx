@@ -9,6 +9,7 @@ const Home = ({
   setScrollDown,
   getHeightHome,
   sizeWindow,
+  setMenu,
 }) => {
   const [scrollPortefolio, setScrollPortefolio] = useState(0);
   const homeRef = useRef();
@@ -37,6 +38,7 @@ const Home = ({
   };
 
   useEffect(() => {
+    setMenu(false);
     const timeout = setTimeout(() => {
       getHeightHome(homeRef);
       setScrollDown(0);
@@ -69,7 +71,7 @@ const Home = ({
         <div className="about__title"></div>
         <div className="about__description">
           <div className="about__description--title" style={styleFolio}>
-            <h2>Portefolio</h2>
+            <h2>Projets</h2>
           </div>
           <div className="about__description--image" style={styleAbout}></div>
           <div className="about__description--text">
@@ -97,6 +99,9 @@ const Home = ({
               style={stylePortefolio1}
             >
               <img src={projects[0].image} alt="projet1" />
+              <Link to={`/portefolio/project/${projects[0].id}`}>
+                Voir le projet
+              </Link>
               <div className="portefolio__presentation__flex--left__link">
                 <h3 className="titleProject">{projects[0].title}</h3>
                 <p className="number">{projects[0].id}</p>
@@ -108,6 +113,9 @@ const Home = ({
             >
               <img src={projects[1].image} alt="projet2" />
               <div className="portefolio__presentation__flex--right__link">
+                <Link to={`/portefolio/project/${projects[1].id}`}>
+                  Voir le projet
+                </Link>
                 <h3 className="titleProject">{projects[1].title}</h3>
                 <p className="number">{projects[1].id}</p>
               </div>
@@ -118,10 +126,14 @@ const Home = ({
             style={stylePortefolio3}
           >
             <img src={projects[2].image} alt="projet3" />
+
             <div className="portefolio__presentation__middle--link">
               <h3 className="titleProject">{projects[2].title}</h3>
               <p className="number">{projects[2].id}</p>
             </div>
+            <Link to={`/portefolio/project/${projects[2].id}`}>
+              Voir le projet
+            </Link>
           </div>
         </div>
         <div className="portefolio__buttonProject">

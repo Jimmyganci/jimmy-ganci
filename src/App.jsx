@@ -12,6 +12,7 @@ function App() {
   const [scrollDown, setScrollDown] = useState(0);
   const [heightHome, setHeightHome] = useState(0);
   const [sizeWindow, setSizeWindow] = useState(0);
+  const [menu, setMenu] = useState(false);
   const location = useLocation();
 
   const getHeightHome = (targetRef) => {
@@ -52,7 +53,10 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <button onClick={() => setMenu(!menu)} className="app__buttonHeader">
+        {menu ? "Fermer" : "Menu"}
+      </button>
+      <Header menu={menu} />
       <TransitionGroup component={null}>
         <CSSTransition key={location.key} classNames="page" timeout={500}>
           <Routes location={location}>
@@ -68,6 +72,7 @@ function App() {
                     setScrollDown={setScrollDown}
                     getHeightHome={getHeightHome}
                     sizeWindow={sizeWindow}
+                    setMenu={setMenu}
                   />
                 }
               />
