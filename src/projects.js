@@ -47,7 +47,7 @@ const projects = [
     date: "Mai 2021",
     status: "Terminé",
     mastered: `Notion en HTML, CSS et Javascript`,
-    difficulty: `Maitriser animation scroll Javascript`,
+    difficulty: `Maitriser les animations au scroll en Javascript`,
     text: `Deuxième projet qui m'a permis de confirmer mes connaissances en html et css.
 	 J'ai également pu en apprendre davantage sur Javascript Vanilla`,
     image: project2,
@@ -88,9 +88,9 @@ const projects = [
     date: "Nov 2021",
     status: "A terminer",
     mastered: `Maitrise du HTML, CSS, javascript vanilla`,
-    difficulty: `Prise en main REACT.js, NODE.js(session)`,
+    difficulty: `Prise en main REACT.js, NODE.js(session, redis)`,
     text: `Deuxième projet à la Wild et premier projet en React.js et Node.js.
-	Utilisation des sessions en avec express et de Redis Store`,
+	Utilisation des sessions avec express et Redis Store`,
     image: project4,
     image2: project4a,
     image3: project4b,
@@ -109,9 +109,9 @@ const projects = [
     date: "Nov 2021",
     status: "A terminer",
     mastered: `Maitrise du HTML, CSS, javascript vanilla, React.js, NODE.js`,
-    difficulty: `Projet réalisé pour un hackaton`,
-    text: `Porjet réalisé lors d"un hackaton de 31h autour du thème de la musique.
-	Certaines fonctionnalités sont à terminer ou modifier concernant l'authentification et la création de compte.`,
+    difficulty: `Timing trés court`,
+    text: `Projet réalisé lors d"un hackaton de 31h autour du thème de la musique.
+	Certaines fonctionnalités sont à terminer ou à modifier concernant l'authentification et la création de compte.`,
     image: project5,
     image2: project5a,
     image3: project5b,
