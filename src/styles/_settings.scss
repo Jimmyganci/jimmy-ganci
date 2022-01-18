@@ -45,6 +45,9 @@ img {
   font-weight: 700;
   text-align: left;
   font-family: "fontNumber";
+  @media screen and(max-width: 850px) {
+    font-size: 25vw;
+  }
 }
 .buttonProject {
   background: none;

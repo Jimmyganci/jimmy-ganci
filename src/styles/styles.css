@@ -60,6 +60,12 @@ img {
   font-family: "fontNumber";
 }
 
+@media screen and (max-width: 850px) {
+  .number {
+    font-size: 25vw;
+  }
+}
+
 .buttonProject {
   background: none;
   border: none;
@@ -262,7 +268,7 @@ img {
 @media screen and (max-width: 500px) {
   .home__heroHeader--square h2 {
     padding: 0.5em 1em;
-    font-size: 7vw;
+    font-size: 10vw;
   }
 }
 
@@ -274,13 +280,13 @@ img {
 
 @media screen and (max-width: 650px) {
   .home__heroHeader--square p {
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
 }
 
 @media screen and (max-width: 400px) {
   .home__heroHeader--square p {
-    font-size: 4vw;
+    font-size: 4.5vw;
   }
 }
 
@@ -305,6 +311,12 @@ img {
   text-transform: uppercase;
   letter-spacing: 3vw;
   font-size: 5vw;
+}
+
+@media screen and (max-width: 800px) {
+  .home__heroHeader--title h2 {
+    font-size: 10vw;
+  }
 }
 
 .home .about__title {
@@ -431,6 +443,12 @@ img {
   font-size: 5vw;
 }
 
+@media screen and (max-width: 850px) {
+  .home .about__description--title h2 {
+    font-size: 10vw;
+  }
+}
+
 .home .portefolio__title {
   height: 50vh;
   background: #9e9e6f;
@@ -475,14 +493,20 @@ img {
 
 @media screen and (max-width: 800px) {
   .home .portefolio__presentation__flex--left {
-    margin-left: -20vw;
-    width: 65vw;
+    margin-left: -5vw;
+    width: 95vw;
   }
 }
 
 .home .portefolio__presentation__flex--left a {
   margin-left: 1em;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 850px) {
+  .home .portefolio__presentation__flex--left a {
+    font-size: 8vw;
+  }
 }
 
 .home .portefolio__presentation__flex--left__link {
@@ -506,10 +530,17 @@ img {
   font-weight: 100;
 }
 
+@media screen and (max-width: 850px) {
+  .home .portefolio__presentation__flex--left__link h3 {
+    font-size: 10vw;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .home .portefolio__presentation__flex--left__link {
     top: 33vw;
     left: 45vw;
+    width: 50vw;
   }
 }
 
@@ -523,8 +554,9 @@ img {
 
 @media screen and (max-width: 800px) {
   .home .portefolio__presentation__flex--right {
-    margin-left: 30vw;
-    width: 65vw;
+    margin-left: 5vw;
+    width: 95vw;
+    margin-top: 10vw;
   }
 }
 
@@ -551,6 +583,8 @@ img {
 @media screen and (max-width: 800px) {
   .home .portefolio__presentation__flex--right__link {
     top: 28vw;
+    width: 95vw;
+    left: 0;
   }
 }
 
@@ -561,19 +595,21 @@ img {
   font-family: "fontTitleProject";
 }
 
-.home .portefolio__presentation__flex--right__link p {
-  font-size: 10vw;
-}
-
-@media screen and (max-width: 800px) {
-  .home .portefolio__presentation__flex--right__link p {
-    font-size: 15vw;
+@media screen and (max-width: 850px) {
+  .home .portefolio__presentation__flex--right__link h3 {
+    font-size: 9vw;
   }
 }
 
 .home .portefolio__presentation__flex--right__link a {
   margin-left: 1em;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 850px) {
+  .home .portefolio__presentation__flex--right__link a {
+    font-size: 8vw;
+  }
 }
 
 .home .portefolio__presentation__middle {
@@ -589,8 +625,8 @@ img {
 
 @media screen and (max-width: 800px) {
   .home .portefolio__presentation__middle {
-    width: 65vw;
-    margin: 20vw 0 0 10vw;
+    width: 95vw;
+    margin: 20vw auto;
   }
 }
 
@@ -599,6 +635,12 @@ img {
   top: 100%;
   text-decoration: underline;
   left: 10vw;
+}
+
+@media screen and (max-width: 850px) {
+  .home .portefolio__presentation__middle a {
+    font-size: 8vw;
+  }
 }
 
 .home .portefolio__presentation__middle--link {
@@ -616,6 +658,12 @@ img {
   margin-bottom: -5vw;
 }
 
+@media screen and (max-width: 850px) {
+  .home .portefolio__presentation__middle--link {
+    margin-left: -50vw;
+  }
+}
+
 .home .portefolio__presentation__middle--link p {
   line-height: 0.5;
 }
@@ -625,6 +673,12 @@ img {
   padding: 0.5em 1em;
   font-weight: 100;
   font-family: "fontTitleProject";
+}
+
+@media screen and (max-width: 850px) {
+  .home .portefolio__presentation__middle--link h3 {
+    font-size: 9vw;
+  }
 }
 
 .home .portefolio__buttonProject {
@@ -674,9 +728,22 @@ img {
   font-size: 5vw;
 }
 
+@media screen and (max-width: 550px) {
+  .home .portefolio__buttonProject button a p {
+    font-size: 8vw;
+  }
+}
+
 .home .portefolio__buttonProject button a img {
   width: 5vw;
   height: 5vw;
+}
+
+@media screen and (max-width: 550px) {
+  .home .portefolio__buttonProject button a img {
+    width: 10vw;
+    height: 10vw;
+  }
 }
 
 .home .test4 {
@@ -946,6 +1013,7 @@ img {
           transition-delay: 1s;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
+  cursor: pointer;
 }
 
 .portefolio .portefolioSlideShow__infos--date {
@@ -1221,6 +1289,12 @@ img {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 550px) {
+  .contact__header--flex--title p {
+    font-size: 10vw;
+  }
+}
+
 .contact__header--flex--title h1 {
   font-size: 16vw;
   line-height: 0.9;
@@ -1235,6 +1309,12 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   line-height: 0.5;
+}
+
+@media screen and (max-width: 550px) {
+  .contact__header--flex--title h1 {
+    font-size: 20vw;
+  }
 }
 
 .contact__header--flex--title h1 span:nth-child(2) {
@@ -1624,7 +1704,7 @@ img {
 
 @media screen and (max-width: 750px) {
   .phone {
-    width: 70%;
+    width: 100%;
   }
 }
 
@@ -1634,7 +1714,7 @@ img {
 
 @media screen and (max-width: 750px) {
   .phone svg {
-    width: 70%;
+    width: 80%;
   }
 }
 
@@ -1676,9 +1756,6 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 

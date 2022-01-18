@@ -6,12 +6,12 @@
   width: 40%;
   position: absolute;
   @media screen and(max-width:750px) {
-    width: 70%;
+    width: 100%;
   }
   svg {
     width: 30vw;
     @media screen and(max-width:750px) {
-      width: 70%;
+      width: 80%;
     }
     .fil0 {
       transition: 1s;
