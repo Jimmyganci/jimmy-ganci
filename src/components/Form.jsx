@@ -6,6 +6,8 @@ const Form = ({ socialRef, setSend }) => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmitMail = (e) => {
     e.preventDefault();
@@ -17,7 +19,15 @@ const Form = ({ socialRef, setSend }) => {
         subject: " ",
         text: text,
       })
-      .then((res) => res.status === 200 && setSend(true));
+      .then((res) => {
+        if (res.status === 200) {
+          setMessage("Votre message a bien été envoyé!");
+          setSend(true);
+        }
+      })
+      .catch((err) => {
+        if (err) setError("Une erreur s'est produite!");
+      });
     setFirstName("");
     setLastName("");
     setEmail("");
@@ -76,6 +86,8 @@ const Form = ({ socialRef, setSend }) => {
         </label>
       </div>
       <div className="form__button">
+        <p style={{ color: "green" }}>{message}</p>
+        <p style={{ color: "red" }}>{error}</p>
         <button ref={socialRef} type="submit">
           ENVOYER
         </button>
